@@ -55,11 +55,7 @@ const UpdateProfile = () => {
         </ScrollView>
       </View>
       <S.Footer style={{ padding: 16 }}>
-        <FButton
-          type="solid"
-          text="Salvar perfil"
-          onPress={() => console.log('teste')}
-        />
+        <FButton text="Salvar perfil" onPress={() => console.log('teste')} />
       </S.Footer>
     </DefaultTemplate>
   );
