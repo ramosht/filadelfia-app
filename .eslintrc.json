@@ -5,7 +5,6 @@
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
-        "airbnb",
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:prettier/recommended"
@@ -39,6 +38,7 @@
       "no-use-before-define": "off",
       "arrow-body-style": ["error", "always"],
       "react/function-component-definition": "off",
+      "arrow-body-style":"off",
       "import/extensions": [
         "error",
         "ignorePackages",
