@@ -13,9 +13,8 @@ const HeaderWithoutBackground = () => {
   const navigation = useNavigation();
 
   return (
-    <View
+    <S.HeaderContainer
       style={{
-        height: '100%',
         width: '100%',
         flexDirection: 'row',
         backgroundColor: theme.colors.white,
@@ -55,7 +54,7 @@ const HeaderWithoutBackground = () => {
           </TouchableOpacity>
         )}
       </S.Column>
-    </View>
+    </S.HeaderContainer>
   );
 };
 

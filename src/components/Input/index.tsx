@@ -14,10 +14,13 @@ type IInputField = {
   errorMessage?: string;
   containerStyle?: Object;
   inputStyle?: Object;
+  numberOfLines?: number;
   onBlur?: () => void;
   autoCapitalize?: 'none' | 'sentences' | 'words' | 'characters';
   passwordField?: boolean;
   maxLength?: number;
+  multiline?: boolean;
+  textAlignVertical?: 'center' | 'top' | 'auto' | 'bottom';
   keyboardType?:
     | 'default'
     | 'numeric'
@@ -45,8 +48,11 @@ const InputField = ({
   errorMessage,
   keyboardType,
   containerStyle,
+  numberOfLines,
   onBlur,
   inputStyle,
+  textAlignVertical,
+  multiline = false,
   maxLength,
   autoCapitalize = 'sentences',
   secureTextEntry = false,
@@ -62,7 +68,10 @@ const InputField = ({
           secureTextEntry={!showPassword || secureTextEntry}
           value={value}
           onBlur={onBlur}
+          numberOfLines={numberOfLines}
           maxLength={maxLength}
+          textAlignVertical={textAlignVertical}
+          multiline={multiline}
           onChangeText={text => setValue(text)}
           placeholder={placeholder}
           placeholderTextColor={theme.colors.lightGrey}

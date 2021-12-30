@@ -5,6 +5,8 @@ import GoBackButton from './GoBackButton';
 import UpdateProfilePicture from './UpdateProfilePicture';
 import Input from './Input';
 import PasswordDemands from './PasswordDemands';
+import Loading from './Loading';
+import TextEmptyPage from './TextEmptyPage';
 
 export {
   Header,
@@ -14,4 +16,6 @@ export {
   UpdateProfilePicture,
   Input,
   PasswordDemands,
+  Loading,
+  TextEmptyPage,
 };

@@ -1,15 +1,18 @@
-import DefaultTemplate from '@templates/DefaultTemplate';
 import React from 'react';
-import { Input } from 'react-native-starsystem/dist/Input';
-import { Text } from 'react-native-starsystem/dist/Text';
-import * as S from './styles';
 
-const Events = () => {
+import { DefaultTemplate } from '@templates/index';
+
+import EventsPerDay from './components/EventsPerDay';
+import { View } from 'react-native';
+
+const Schedule: React.FC = () => {
   return (
     <DefaultTemplate goBack={false} home>
-      <Text h1>aisjisajijas</Text>
+      <View style={{ padding: 16 }}>
+        <EventsPerDay />
+      </View>
     </DefaultTemplate>
   );
 };
 
-export default Events;
+export default Schedule;

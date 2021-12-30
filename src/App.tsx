@@ -4,15 +4,21 @@ import { ThemeProvider } from 'react-native-starsystem';
 import Routes from './routes';
 import { AuthenticationProvider } from '@contexts/authentication/authentication.context';
 import { UserProvider } from '@contexts/user/user.context';
+import { LoadingProvider } from '@contexts/loading/loading.context';
+import { ChurchProvider } from '@contexts/church/church.context';
 
 const App = () => {
   return (
     <Root>
       <ThemeProvider>
         <UserProvider>
-          <AuthenticationProvider>
-            <Routes />
-          </AuthenticationProvider>
+          <ChurchProvider>
+            <LoadingProvider>
+              <AuthenticationProvider>
+                <Routes />
+              </AuthenticationProvider>
+            </LoadingProvider>
+          </ChurchProvider>
         </UserProvider>
       </ThemeProvider>
     </Root>

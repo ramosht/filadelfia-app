@@ -1,13 +1,16 @@
-import DefaultTemplate from '@templates/DefaultTemplate';
 import React from 'react';
-import { Input } from 'react-native-starsystem/dist/Input';
-import { Text } from 'react-native-starsystem/dist/Text';
-import * as S from './styles';
 
-const Schedule = () => {
+import { DefaultTemplate } from '@templates/index';
+
+import WeeklyEvents from './components/WeeklyEvents';
+import { View } from 'react-native';
+
+const Schedule: React.FC = () => {
   return (
-    <DefaultTemplate goBack={false} home>
-      <Text h1>aisjisajijas</Text>
+    <DefaultTemplate home goBack={false}>
+      <View style={{ padding: 16 }}>
+        <WeeklyEvents />
+      </View>
     </DefaultTemplate>
   );
 };
